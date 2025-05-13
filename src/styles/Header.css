@@ -1,0 +1,150 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #030403;
+  z-index: 100;
+  box-shadow: 0 2px 8px #000a;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 64px;
+}
+
+.nav-logo {
+  font-family: 'Press Start 2P', monospace;
+  color: #7ffb7f;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #7ffb7f;
+  color: #101c10;
+  transform: translateY(-2px);
+}
+
+#header_icon_outer {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  font-size: 30px;
+  font-family: "Press Start 2P", serif;
+  color: #209855;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 80px;
+  border: solid 2px #209855;
+  background-color: rgb(1, 17, 26);
+  color: #209855;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+  border: solid 2px rgb(1, 17, 26);
+  background-color: #209855;
+  color: white;
+}
+
+button.active {
+  background-color: #209855;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .main-nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    padding: 0 10px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.6rem;
+    padding: 4px 6px;
+  }
+} 

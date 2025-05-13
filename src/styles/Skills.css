@@ -1,0 +1,111 @@
+.skills-container {
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  background-color: #0a0a0a; /* Dark background */
+  color: #fff; /* Default text color */
+  overflow: hidden;
+}
+
+.skills-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(9, 9, 15, 0.8); /* Dark card background */
+  backdrop-filter: blur(5px);
+  border: 1px solid #209855; /* Achievement green border */
+  box-shadow: 0 0 15px rgba(32, 152, 85, 0.2); /* Green shadow */
+}
+
+.skills-title {
+  color: #209855; /* Achievement green */
+  font-family: "Press Start 2P", serif; /* Keep pixel font */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: rgba(0, 20, 0, 0.3); /* Slightly different dark card background */
+  padding: 1.5rem;
+  border: 1px solid #209855;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(32, 152, 85, 0.1);
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(32, 152, 85, 0.2);
+  border-color: #2C7887; /* Achievement blue on hover */
+}
+
+.skill-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.skill-card h2 {
+  color: #2C7887; /* Achievement blue */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  margin-bottom: 0.5rem;
+  color: #eee; /* Lighter text */
+}
+
+/* Animation Classes (keep, but update border/highlight color) */
+.cyber-border {
+  position: relative;
+  overflow: hidden;
+  border-color: #209855 !important; /* Achievement green */
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2C7887); /* Achievement blue scan */
+  animation: borderScan 2s linear infinite;
+}
+
+/* Keep glitch/scan text animations from animations.css using their default green */
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 1rem;
+  }
+  .skills-content {
+    padding: 1rem;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skill-card h2 {
+    font-size: 1.2rem;
+  }
+} 

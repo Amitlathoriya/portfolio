@@ -1,0 +1,186 @@
+/* Matrix rain effect */
+@keyframes matrixRain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Terminal typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Hacker scan effect */
+@keyframes scan {
+  0% {
+    background-position: 0 -100vh;
+  }
+  100% {
+    background-position: 0 100vh;
+  }
+}
+
+/* Binary rain effect */
+@keyframes binaryRain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Cyber pulse effect */
+@keyframes cyberPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(127, 251, 127, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(127, 251, 127, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(127, 251, 127, 0);
+  }
+}
+
+/* Apply animations to elements */
+.hero-name {
+  animation: glitch 5s infinite;
+  text-shadow: 2px 2px #7ffb7f, -2px -2px #ff0000;
+}
+
+.hero-greeting {
+  animation: typing 3.5s steps(40, end);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #7ffb7f;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent,
+    rgba(127, 251, 127, 0.2),
+    transparent
+  );
+  animation: scan 3s linear infinite;
+}
+
+.card:hover {
+  animation: cyberPulse 2s infinite;
+}
+
+.info-list li {
+  position: relative;
+  overflow: hidden;
+}
+
+.info-list li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(127, 251, 127, 0.2),
+    transparent
+  );
+  animation: scan 2s linear infinite;
+}
+
+/* Binary background effect */
+.binary-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.binary-bg::before {
+  content: '01';
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  color: #7ffb7f;
+  animation: binaryRain 20s linear infinite;
+}
+
+/* Terminal cursor effect */
+.terminal-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #7ffb7f;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* Cyber border effect */
+.cyber-border {
+  position: relative;
+  border: 2px solid #7ffb7f;
+  overflow: hidden;
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(127, 251, 127, 0.1),
+    transparent
+  );
+  animation: scan 3s linear infinite;
+} 
